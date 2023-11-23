@@ -1,11 +1,15 @@
 //second screen of the web where the scroll function will land
 import 'package:flutter/material.dart';
+import 'package:screen15/custom/custom_text_style.dart';
+import 'package:screen15/custom/rich_text1.dart';
+import 'package:screen15/res/component/app_string.dart';
 import 'package:screen15/view/screen/large/fifthstack.dart';
 import 'package:screen15/view/screen/large/fourthstack.dart';
 import 'package:screen15/view/screen/large/itemscard.dart';
 import 'package:screen15/view/screen/large/laststack.dart';
 import 'package:screen15/view/screen/large/secondstack.dart';
 import 'package:screen15/view/screen/large/thirdstack.dart';
+
 class RemainingScreen extends StatefulWidget {
   const RemainingScreen({super.key});
 
@@ -21,36 +25,38 @@ class _RemainingScreenState extends State<RemainingScreen> {
         const SizedBox(
           height: 40,
         ),
-        const Text(
-          'Infoprofile Is designed for everyone.',
-          style: TextStyle(fontSize: 38, fontWeight: FontWeight.bold),
+        CustomTextStyle(
+          text: AppString.infoprofileisdegined,
+          fontSize: 38,
+          fontWeight: FontWeight.bold,
         ),
         const SizedBox(
           height: 10,
         ),
-        RichText(
-          text: const TextSpan(
-            text: 'What ',
-            style: TextStyle(
-                color: Colors.black, fontSize: 38, fontWeight: FontWeight.bold),
-            children: [
-              TextSpan(
-                text: 'InfoProfile provides',
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 38,
-                    fontWeight: FontWeight.bold),
-              ),
-              TextSpan(
-                text: ' you',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 38,
-                    fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-        ),
+        // RichText(
+        //   text: const TextSpan(
+        //     text: 'What ',
+        //     style: TextStyle(
+        //         color: Colors.black, fontSize: 38, fontWeight: FontWeight.bold),
+        //     children: [
+        //       TextSpan(
+        //         text: 'InfoProfile provides',
+        //         style: TextStyle(
+        //             color: Colors.blue,
+        //             fontSize: 38,
+        //             fontWeight: FontWeight.bold),
+        //       ),
+        //       TextSpan(
+        //         text: ' you',
+        //         style: TextStyle(
+        //             color: Colors.black,
+        //             fontSize: 38,
+        //             fontWeight: FontWeight.bold),
+        //       ),
+        //     ],
+        //   ),
+        // ),
+        richTextW(context),
         const SizedBox(
           height: 30,
         ),
