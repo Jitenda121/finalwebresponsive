@@ -1,6 +1,9 @@
 //fifthe screen of the tab with dots and text
 
 import 'package:flutter/material.dart';
+import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_string.dart';
 
 class TabScreenFive extends StatefulWidget {
   const TabScreenFive({super.key});
@@ -16,30 +19,30 @@ class _TabScreenFiveState extends State<TabScreenFive> {
       children: [
         //conatiner for defining the base
         Container(
-          height: 500,
-          color: Colors.white,
-        ),
+            height: 500,
+            color:
+                // Colors.white,
+                AppColor.myColor),
         //positioning of the rectangle
         Positioned(
             bottom: 70,
             child: SizedBox(
-                height: 400, child: Image.asset('images/last_rectangle.png'))),
+                height: 400, child: Image.asset(AppImage.lastrectangle))),
         //positioning of the dots on top left
-        Image.asset('images/dots.png'),
+        Image.asset(AppImage.dots),
 
         //positioning of the dots on bottom right
-        Positioned(bottom: 0, right: 0, child: Image.asset('images/dots.png')),
+        Positioned(bottom: 0, right: 0, child: Image.asset(AppImage.dots)),
         //positiong of the download text and containers
         Positioned(
             top: 50,
             left: 240,
             child: Column(
               children: [
-                SizedBox(
-                    height: 250, child: Image.asset('images/download.png')),
-                const Text(
-                  "Download Our App",
-                  style: TextStyle(
+                SizedBox(height: 250, child: Image.asset(AppImage.download)),
+                Text(
+                  AppString.download1,
+                  style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                       fontSize: 25),
@@ -53,7 +56,7 @@ class _TabScreenFiveState extends State<TabScreenFive> {
                     SizedBox(
                         width: 150,
                         child: Image.asset(
-                          'images/google_play.png',
+                          AppImage.googleplaystore,
                           fit: BoxFit.contain,
                         )),
                     const SizedBox(
@@ -62,7 +65,7 @@ class _TabScreenFiveState extends State<TabScreenFive> {
                     SizedBox(
                         width: 150,
                         child: Image.asset(
-                          'images/app_store.png',
+                          AppImage.appleplaystore,
                           fit: BoxFit.contain,
                         ))
                   ],

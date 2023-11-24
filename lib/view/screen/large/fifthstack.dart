@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_string.dart';
 
 class WebStackFive extends StatefulWidget {
   const WebStackFive({super.key});
@@ -28,7 +30,7 @@ class _WebStackFiveState extends State<WebStackFive> {
             child: SizedBox(
                 height: 350,
                 child: Image.asset(
-                  'images/world.png',
+                 AppImage.world,
                   fit: BoxFit.contain,
                 ))),
         //positoning of the white rectangle image
@@ -38,7 +40,7 @@ class _WebStackFiveState extends State<WebStackFive> {
             child: SizedBox(
                 height: 300,
                 child: Image.asset(
-                  'images/white_rectangle_bottom.png',
+                  AppImage.bottomrectangle,
                   fit: BoxFit.cover,
                 ))),
         //positiong of the text on the rectangle
@@ -47,19 +49,19 @@ class _WebStackFiveState extends State<WebStackFive> {
           right: 50,
           child: SizedBox(
             width: MediaQuery.of(context).size.width * 0.30,
-            child: const Column(
+            child:  Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Make friends by Building connections that are relevant to you.",
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                 AppString.makefriend,
+                  style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  "The best domain for a real-time experience of the corporate world . Improving your communication and time management skills is the main prospect. PR, Sponsorship, Social media handling , Treasury, and Marketing are elements of this domain.",
-                  style: TextStyle(
+                 AppString.thebestdomain,
+                  style: const TextStyle(
                       fontSize: 18,
                       color: Colors.grey,
                       fontWeight: FontWeight.bold),

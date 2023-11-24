@@ -1,7 +1,12 @@
 //second screen of the tab for displaying the download buttons of appstore and playstore
 
 import 'package:flutter/material.dart';
+import 'package:screen15/custom/rich_text1.dart';
+import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_string.dart';
 import 'package:screen15/view/screen/large/itemscard.dart';
+
 class TabSecondScreen extends StatefulWidget {
   const TabSecondScreen({super.key});
 
@@ -13,7 +18,8 @@ class _TabSecondScreenState extends State<TabSecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: AppColor.myColor,
+      // Colors.white,
       child: Column(
         children: [
           //download icons for the site
@@ -23,7 +29,7 @@ class _TabSecondScreenState extends State<TabSecondScreen> {
               SizedBox(
                   width: 150,
                   child: Image.asset(
-                    'images/google_play.png',
+                    AppImage.googleplaystore,
                     fit: BoxFit.contain,
                   )),
               const SizedBox(
@@ -32,7 +38,7 @@ class _TabSecondScreenState extends State<TabSecondScreen> {
               SizedBox(
                   width: 150,
                   child: Image.asset(
-                    'images/app_store.png',
+                    AppImage.appleplaystore,
                     fit: BoxFit.contain,
                   ))
             ],
@@ -41,38 +47,15 @@ class _TabSecondScreenState extends State<TabSecondScreen> {
             height: 80,
           ),
           //properties of the app text
-          const Text(
-            'Infoprofile Is designed for everyone.',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          Text(
+            AppString.infoprofileisdegined,
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 10,
           ),
-          RichText(
-            text: const TextSpan(
-              text: 'What ',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
-              children: [
-                TextSpan(
-                  text: 'InfoProfile provides',
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold),
-                ),
-                TextSpan(
-                  text: ' you',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
+         
+          richTextW(context),
           //calling the function which was made earlier to disply properties
           const SiteCard()
         ],

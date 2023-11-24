@@ -1,6 +1,7 @@
 //main screen of the tab where all the classes are called for displaying the text
 
 import 'package:flutter/material.dart';
+import 'package:screen15/res/component/app_color.dart';
 import 'package:screen15/view/screen/medium/fifthscreentab.dart';
 import 'package:screen15/view/screen/medium/screenseventab.dart';
 import 'package:screen15/view/screen/medium/sixthsxreentab.dart';
@@ -20,7 +21,8 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: AppColor.myColor,
+      // Colors.white,
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

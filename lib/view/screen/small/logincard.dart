@@ -1,31 +1,30 @@
 // login card class that is called on the first screen on each of the type
 // this class is called on all tab,desktop and mobile
-
 import 'package:flutter/material.dart';
-
+import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_string.dart';
+import 'package:screen15/res/component/app_string_card.dart';
 class LoginCard extends StatefulWidget {
   const LoginCard({Key? key}) : super(key: key);
-
   @override
   State<LoginCard> createState() => _LoginCardState();
 }
-
 class _LoginCardState extends State<LoginCard> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   late String _email;
   late String _password;
   bool _isPasswordVisible = false;
   final TextEditingController _passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Card(
         color: Colors.white,
-        elevation: 10,
+        //elevation: 10,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        shadowColor: Colors.white,
+        //shadowColor: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Form(
@@ -33,19 +32,21 @@ class _LoginCardState extends State<LoginCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Log In",
+                Text(
+                  AppString.login,
                   style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 50, 3, 236)),
+                      color: AppColor.myColor1
+                      // Color.fromARGB(255, 50, 3, 236)
+                      ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "Enter username/email and password to login or use social media accounts to login into the application.",
-                  style: TextStyle(
+                Text(
+                  AppStringCard.enterusername,
+                  style: const TextStyle(
                     fontSize: 18,
                   ),
                 ),
@@ -59,23 +60,21 @@ class _LoginCardState extends State<LoginCard> {
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     child: TextFormField(
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         border: InputBorder.none,
                         icon: Icon(
                           Icons.mail,
-                          color: Colors.blue,
+                          color: AppColor.myColor1,
                         ),
-                        hintText: 'Email / Username',
+                        hintText: AppStringCard.hint1,
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter an email or username.';
+                          return AppStringCard.please;
                         }
 
-                        if (!RegExp(
-                                r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$')
-                            .hasMatch(value)) {
-                          return 'Please enter a valid email or username.';
+                        if (!RegExp(AppStringCard.regx).hasMatch(value)) {
+                          return AppStringCard.entervalue;
                         }
 
                         return null;
@@ -102,9 +101,9 @@ class _LoginCardState extends State<LoginCard> {
                         border: InputBorder.none,
                         icon: Icon(
                           Icons.lock,
-                          color: Colors.blue,
+                          color: AppColor.myColor1,
                         ),
-                        hintText: 'Password',
+                        hintText: AppStringCard.password,
                         suffixIcon: GestureDetector(
                           onTap: () {
                             setState(() {
@@ -121,14 +120,14 @@ class _LoginCardState extends State<LoginCard> {
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter a password.';
+                          return AppStringCard.pleaseenterpassword;
                         }
 
                         // Password should be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one digit, and one special character
                         if (!RegExp(
-                                r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}|":;<>,.?/~\\-]).{8,}$')
-                            .hasMatch(value)) {
-                          return 'Password must be at least 8 characters long and in the \n format Xyz@1234';
+                            // r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}|":;<>,.?/~\\-]).{8,}$'
+                            AppStringCard.regxpassword).hasMatch(value)) {
+                          return AppStringCard.passwordmustbe;
                         }
 
                         return null;
@@ -148,10 +147,10 @@ class _LoginCardState extends State<LoginCard> {
                     onTap: () {
                       // Add your logic for forgot password here
                     },
-                    child: const Text(
-                      "Forgot Password?",
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    child: Text(
+                      AppStringCard.forgotpassword,
+                      style: const TextStyle(
+                          fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -163,8 +162,8 @@ class _LoginCardState extends State<LoginCard> {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
 
-                      debugPrint('Valid Email/Username: $_email');
-                      debugPrint('Password: $_password');
+                      // debugPrint('Valid Email/Username: $_email');
+                      //debugPrint('Password: $_password');
                     }
                   },
                   child: Container(
@@ -173,10 +172,11 @@ class _LoginCardState extends State<LoginCard> {
                       color: Colors.blue,
                     ),
                     height: 60,
-                    child: const Center(
+                    child: Center(
                         child: Text(
-                      "Log In",
-                      style: TextStyle(
+                      // "Log In",
+                      AppString.login,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold),
@@ -186,13 +186,14 @@ class _LoginCardState extends State<LoginCard> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Wrap(direction: Axis.vertical, children: [
                       Text(
-                        "OR",
-                        style: TextStyle(
+                        AppStringCard.or,
+                        // "OR",
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                     ]),
@@ -205,10 +206,10 @@ class _LoginCardState extends State<LoginCard> {
                   onTap: () {
                     // Add your logic for login with OTP here
                   },
-                  child: const Center(
+                  child: Center(
                     child: Text(
-                      "Log In With OTP",
-                      style: TextStyle(
+                      AppStringCard.logininwithotp,
+                      style: const TextStyle(
                           fontSize: 17,
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -219,7 +220,7 @@ class _LoginCardState extends State<LoginCard> {
                 const SizedBox(
                   height: 10,
                 ),
-                Center(child: Image.asset('images/icons.png')),
+                Center(child: Image.asset(AppImage.iconnn)),
                 const SizedBox(
                   height: 10,
                 ),
@@ -231,8 +232,8 @@ class _LoginCardState extends State<LoginCard> {
                       direction: Axis.horizontal,
                       children: [
                         SizedBox(
-                          child: Text("Don't Have an Account?  ",
-                              style: TextStyle(
+                          child: Text(AppStringCard.dont,
+                              style: const TextStyle(
                                   fontSize: 15, fontWeight: FontWeight.bold)),
                         ),
                         GestureDetector(
@@ -241,8 +242,9 @@ class _LoginCardState extends State<LoginCard> {
                           },
                           child: SizedBox(
                             child: Text(
-                              "Sign Up",
-                              style: TextStyle(
+                              //"Sign Up",
+                              AppString.signup,
+                              style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.blue,
                                   fontWeight: FontWeight.bold,

@@ -1,5 +1,8 @@
 //main class of the phone screen where all the dats is called and made
 import 'package:flutter/material.dart';
+import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_string.dart';
+import 'package:screen15/res/component/app_string_tab.dart';
 import 'package:screen15/view/screen/large/itemscard.dart';
 import 'package:screen15/view/screen/small/bottomstack.dart';
 import 'package:screen15/view/screen/small/logincard.dart';
@@ -16,7 +19,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      color: AppColor.myColor,
       child: Stack(
         children: [
           Image.asset(AppImageMobile.toprectangle),
@@ -29,13 +32,15 @@ class _PhoneScreenState extends State<PhoneScreen> {
           Column(
             children: [
               Center(child: Image.asset(AppImageMobile.info)),
-              const Text(
-                "Meet Your Best",
-                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+              Text(
+                //"Meet Your Best",
+                AppStringTab.meet,
+                style:
+                    const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
-              const Text(
-                'Connections',
-                style: TextStyle(
+              Text(
+                AppStringTab.connection,
+                style: const TextStyle(
                     fontSize: 25,
                     color: Color.fromARGB(255, 2, 136, 246),
                     fontWeight: FontWeight.bold),
@@ -43,9 +48,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
               const SizedBox(
                 height: 25,
               ),
-              const Text(
-                "Build fast, easy & lifelong professional connections.",
-                style: TextStyle(fontWeight: FontWeight.bold),
+              Text(
+                // "Build fast, easy & lifelong professional connections.",
+                AppStringTab.buildfast,
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 30,
@@ -74,31 +80,37 @@ class _PhoneScreenState extends State<PhoneScreen> {
               const SizedBox(
                 height: 80,
               ),
-              const Text(
-                'Infoprofile Is designed for everyone.',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              Text(
+                // 'Infoprofile Is designed for everyone.',
+                AppString.infoprofileisdegined,
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 10,
               ),
               RichText(
-                text: const TextSpan(
-                  text: 'What ',
-                  style: TextStyle(
+                text: TextSpan(
+                  text: AppString.what,
+                  style: const TextStyle(
                       color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.bold),
                   children: [
                     TextSpan(
-                      text: 'InfoProfile provides',
-                      style: TextStyle(
+                      text:
+                          //'InfoProfile provides',
+                          AppString.infoprofile,
+                      style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: ' you',
-                      style: TextStyle(
+                      text:
+                          // ' you',
+                          AppString.you,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
@@ -119,30 +131,38 @@ class _PhoneScreenState extends State<PhoneScreen> {
                 height: 50,
               ),
               RichText(
-                text: const TextSpan(
-                  text: 'You can create\n',
-                  style: TextStyle(
+                text: TextSpan(
+                  text:
+                      //'You can create\n',
+                      AppString.youcancreate1,
+                  style: const TextStyle(
                       color: Colors.black,
                       fontSize: 25,
                       fontWeight: FontWeight.bold),
                   children: [
                     TextSpan(
-                      text: 'Multiple profiles ',
-                      style: TextStyle(
+                      text:
+                          // 'Multiple profiles ',
+                          AppString.multipleprofile1,
+                      style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: 'for\n',
-                      style: TextStyle(
+                      text:
+                          // 'for\n',
+                          AppString.fornn,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: 'your account',
-                      style: TextStyle(
+                      text:
+                          //'your account',
+                          AppString.youraccount,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
@@ -153,9 +173,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "A domain that helps you\ndevelop your skills through\nbuilding multiple portals to\nsolve problems . All you need is\na laptop and an attitude\nto learn and progress. We\nprimarily deal with Web Dev,\nApp Dev and Blockchain\nelements.",
-                style: TextStyle(
+              Text(
+                // "A domain that helps you\ndevelop your skills through\nbuilding multiple portals to\nsolve problems . All you need is\na laptop and an attitude\nto learn and progress. We\nprimarily deal with Web Dev,\nApp Dev and Blockchain\nelements.",
+                AppString.adomain3,
+                style: const TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
                     fontWeight: FontWeight.bold),
@@ -168,44 +189,56 @@ class _PhoneScreenState extends State<PhoneScreen> {
                   height: 350,
                   child: Image.asset(AppImageMobile.manthinking)),
               RichText(
-                text: const TextSpan(
-                  text: 'Be ',
-                  style: TextStyle(
+                text: TextSpan(
+                  text:
+                      //'Be ',
+                      AppString.be,
+                  style: const TextStyle(
                       color: Colors.black,
                       fontSize: 27,
                       fontWeight: FontWeight.bold),
                   children: [
                     TextSpan(
-                      text: 'Creative ',
-                      style: TextStyle(
+                      text:
+                          // 'Creative ',
+                          AppString.creative,
+                      style: const TextStyle(
                           color: Colors.blue,
                           fontSize: 27,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: 'in your\n',
-                      style: TextStyle(
+                      text:
+                          //'in your\n',
+                          AppString.inyourn,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 27,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: 'own way by joining\n',
-                      style: TextStyle(
+                      text:
+                          //'own way by joining\n',
+                          AppString.ouwnway1,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 27,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: 'or building a \n',
-                      style: TextStyle(
+                      text:
+                          //'or building a \n',
+                          AppString.orbuilding1,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 27,
                           fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
-                      text: 'community',
-                      style: TextStyle(
+                      text:
+                          // 'community',
+                          AppString.community,
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 27,
                           fontWeight: FontWeight.bold),
@@ -216,9 +249,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                'Here we produce unusual ideas,\nreflecting the originality of the\nGitHub Community SRM. We\nbuild a transformative\nexperience for our members in\nthe creative field dealing with\nUI/UX, VFX/GFX, Content Writing\nand Photography elements.',
-                style: TextStyle(
+              Text(
+                // 'Here we produce unusual ideas,\nreflecting the originality of the\nGitHub Community SRM. We\nbuild a transformative\nexperience for our members in\nthe creative field dealing with\nUI/UX, VFX/GFX, Content Writing\nand Photography elements.',
+                AppString.hereweproducen,
+                style: const TextStyle(
                     fontSize: 16,
                     color: Colors.grey,
                     fontWeight: FontWeight.bold),
@@ -243,9 +277,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
                   Column(
                     children: [
                       Image.asset(AppImageMobile.download),
-                      const Text(
-                        "Download our App from",
-                        style: TextStyle(
+                      Text(
+                        // "Download our App from",
+                        AppString.dowload,
+                        style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
@@ -278,16 +313,22 @@ class _PhoneScreenState extends State<PhoneScreen> {
                 ],
               ),
               Image.asset(AppImageMobile.world),
-              const Text(
-                "Make friends by\nBuilding connections\nthat are relevant to\nyou.",
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+
+              Text(
+                //
+                // "Make friends by\nBuilding connections\nthat are relevant to\nyou.",
+                AppString.makefriendphone,
+
+                style:
+                    const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "The best domain for a real-time\nexperience of the corporate\nworld . Improving your\ncommunication and time\nmanagement skills is the main\nprospect. PR, Sponsorship,\nSocial media handling ,\nTreasury, and Marketing are\nelements of this\ndomain.",
-                style: TextStyle(
+              Text(
+                //"The best domain for a real-time\nexperience of the corporate\nworld . Improving your\ncommunication and time\nmanagement skills is the main\nprospect. PR, Sponsorship,\nSocial media handling ,\nTreasury, and Marketing are\nelements of this\ndomain."
+                AppString.thebestdomainphone,
+                style: const TextStyle(
                     fontSize: 17,
                     color: Colors.grey,
                     fontWeight: FontWeight.bold),
@@ -295,212 +336,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
               const SizedBox(
                 height: 50,
               ),
-              // Stack(
-              //   children: [
-              //     Container(
-              //       height: 1060,
-              //       color: Colors.white,
-              //     ),
-              //     Positioned(
-              //       top: 140,
-              //       child: Container(
-              //         height: 1060,
-              //         width: MediaQuery.of(context).size.width * 1,
-              //         color: AppColor.myColor1,
-              //         child: Padding(
-              //           padding: const EdgeInsets.only(left: 30),
-              //           child: Column(
-              //             crossAxisAlignment: CrossAxisAlignment.start,
-              //             children: [
-              //               const SizedBox(
-              //                 height: 140,
-              //               ),
-              //               SizedBox(
-              //                   width: 200,
-              //                   child: Image.asset(
-              //                     AppImageMobile.bw,
-              //                     fit: BoxFit.contain,
-              //                   )),
-              //               const SizedBox(
-              //                 height: 20,
-              //               ),
-              //               const Text(
-              //                 "Not a normal app, its unique!",
-              //                 style: TextStyle(
-              //                     fontSize: 15,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 20,
-              //               ),
-              //               const Text(
-              //                 "Services are provided everywhere.",
-              //                 style: TextStyle(
-              //                     fontSize: 15,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 30,
-              //               ),
-              //               Image.asset(AppImageMobile.logo1),
-              //               const SizedBox(
-              //                 height: 30,
-              //               ),
-              //               const Text(
-              //                 "Features",
-              //                 style: TextStyle(
-              //                     fontSize: 18,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "View Feeds",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "Make Connections",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "Creating Visiting Cards",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "Create Different Profile Pages",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 30,
-              //               ),
-              //               const Text(
-              //                 "Links",
-              //                 style: TextStyle(
-              //                     fontSize: 20,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "Privacy Policy",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "Terms & Connections",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 30,
-              //               ),
-              //               const Text(
-              //                 "Company",
-              //                 style: TextStyle(
-              //                     fontSize: 20,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "About Us",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 10,
-              //               ),
-              //               const Text(
-              //                 "Contact Us",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 30,
-              //               ),
-              //               const Text(
-              //                 "Help & Support",
-              //                 style: TextStyle(
-              //                     fontSize: 20,
-              //                     fontWeight: FontWeight.bold,
-              //                     color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 20,
-              //               ),
-              //               const Text(
-              //                 "Getting Started FAQ",
-              //                 style:
-              //                     TextStyle(fontSize: 15, color: Colors.white),
-              //               ),
-              //               const SizedBox(
-              //                 height: 20,
-              //               ),
-              //               Container(
-              //                 height: 1,
-              //                 width: 380,
-              //                 color: Colors.white,
-              //               ),
-              //               const SizedBox(
-              //                 height: 30,
-              //               ),
-              //               const Wrap(
-              //                 direction: Axis.vertical,
-              //                 children: [
-              //                   Text(
-              //                     "© Copyright Infoprofile LTD.",
-              //                     style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.bold,
-              //                         color: Colors.white),
-              //                   ),
-              //                   SizedBox(
-              //                     width: 95,
-              //                   ),
-              //                   Text(
-              //                     "All rights reserved.",
-              //                     style: TextStyle(
-              //                         fontSize: 12,
-              //                         fontWeight: FontWeight.bold,
-              //                         color: Colors.white),
-              //                   )
-              //                 ],
-              //               ),
-              //               const SizedBox(
-              //                 height: 20,
-              //               )
-              //             ],
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //     const Center(child: BottomLoginCard()),
-              //   ],
-              // )
+
               // MobileCard()
               bottomStack1(context)
             ],

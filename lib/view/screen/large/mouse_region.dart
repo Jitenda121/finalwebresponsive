@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_string_mouseregion.dart';
 
 class IosTablet extends StatefulWidget {
   const IosTablet({
@@ -46,7 +47,6 @@ class _SiteCardState extends State<IosTablet> {
                     icon,
                     size: 40,
                     color: Colors.white,
-                    
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -78,23 +78,31 @@ class _SiteCardState extends State<IosTablet> {
       //using of wrap to automatically get the size of the screen and adjust according to that
       children: [
         //calling the function to display the properties
-        infoProfileCardWeb(Icons.badge, 'Visiting\nCard',
-            'Share your visiting cards with the best connections all around the country.',
+        infoProfileCardWeb(
+            Icons.badge,
+            //'Visiting\nCard',
+            AppStringMouseRegion.visitingcard,
+            AppStringMouseRegion.shareyour,
+            //'Share your visiting cards with the best connections all around the country.',
             () {
           //defining the set state to change properties when clicked
           setState(() {
             visitCardWeb = true;
             shareMediaWeb = false;
             groupWeb = false;
-            
           });
         }, visitCardWeb),
         const SizedBox(
           width: 50,
         ),
         //calling the function to display the properties
-        infoProfileCardWeb(Icons.share, 'Share\nMedia',
-            'Share your favourite images,video or any link yo feel like sharing with your connections or community.',
+        infoProfileCardWeb(
+            Icons.share,
+            //'Share\nMedia',
+            AppStringMouseRegion.sharemedia,
+            AppStringMouseRegion.shareyourfav,
+
+            //'Share your favourite images,video or any link yo feel like sharing with your connections or community.',
             () {
           //defining the set state to change properties when clicked
           setState(() {
@@ -107,8 +115,13 @@ class _SiteCardState extends State<IosTablet> {
           width: 50,
         ),
         //calling the function to display the properties
-        infoProfileCardWeb(Icons.group, 'Multiple\nProfile',
-            'You can choose to make multiple profiles for your accounts.', () {
+        infoProfileCardWeb(
+            Icons.group,
+            //'Multiple\nProfile',
+            AppStringMouseRegion.multipleprofiles,
+            AppStringMouseRegion.youcanuse,
+            // 'You can choose to make multiple profiles for your accounts.',
+            () {
           setState(() {
             //defining the set state to change properties when clicked
             visitCardWeb = false;

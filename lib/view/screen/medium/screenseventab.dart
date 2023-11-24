@@ -1,7 +1,8 @@
 //screen seven of the tab for displaying about the company
-
 import 'package:flutter/material.dart';
 import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_string_last_container.dart';
 import 'package:screen15/view/screen/small/bottomcard.dart';
 
 class TabScreenSeven extends StatefulWidget {
@@ -19,7 +20,8 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
         //conatiner for making the base
         Container(
           height: 700,
-          color: Colors.white,
+          color:AppColor.myColor
+          // Colors.white,
         ),
         Positioned(
           bottom: 0,
@@ -50,15 +52,16 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
                   SizedBox(
                       height: 60,
                       child: Image.asset(
-                        'images/info_B&W.png',
+                        AppImage.bw,
                         fit: BoxFit.contain,
                       )),
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
-                    "Not a normal app, its unique!",
-                    style: TextStyle(
+                   Text(
+                   // "Not a normal app, its unique!",
+                   AppStringLastContainer.notanormal,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
@@ -66,9 +69,10 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
-                    "Services are provided everywhere.",
-                    style: TextStyle(
+                   Text(
+                    //"Services are provided everywhere.",
+                    AppStringLastContainer.services,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
@@ -76,70 +80,80 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Image.asset('images/logo1.png')
+                 // Image.asset('images/logo1.png'),
+                   Image.asset(AppImage.logo1)
                 ],
               ),
-              const Column(
+               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Features",
-                    style: TextStyle(
+                   // "Features",
+                   AppStringLastContainer.features,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "View Feeds",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                   // "View Feeds",
+                   AppStringLastContainer.viewfeeds,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Make Connections",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                   // "Make Connections",
+                   AppStringLastContainer.makeconnection,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Create Visiting cards",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    AppStringLastContainer.createvisting,
+                    // "Create Visiting cards",
+                   /// AppStr
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Create Different profile pages",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    //"Create Different profile pages",
+                    AppStringLastContainer.create,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   Text(
-                    "Links",
-                    style: TextStyle(
+                   // "Links",
+                   AppStringLastContainer.links,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Privacy & Policy",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    //"Privacy & Policy",
+                    AppStringLastContainer.privacy,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Terms & Connections",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                   // "Terms & Connections",
+                   AppStringLastContainer.termscondition,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
                 ],
               ),
@@ -148,46 +162,51 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
                 width: 1,
                 color: Colors.white,
               ),
-              const Column(
+               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Company",
-                    style: TextStyle(
+                   // "Company",
+                   AppStringLastContainer.company,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Contact US",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    //"Contact US",
+                    AppStringLastContainer.contactus,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "About US",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                   // "About US",
+                   AppStringLastContainer.aboutus,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
                   Text(
-                    "Help & Support",
-                    style: TextStyle(
+                    //"Help & Support",
+                    AppStringLastContainer.helpandsupport,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Getting Started with FAQ",
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    //"Getting Started with FAQ",
+                    AppStringLastContainer.gettingstartewd,
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
                 ],
               )
@@ -203,7 +222,7 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
               height: 1,
               color: Colors.white,
             )),
-        const Positioned(
+         Positioned(
           bottom: 30,
           left: 25,
           right: 25,
@@ -211,18 +230,20 @@ class _TabScreenSevenState extends State<TabScreenSeven> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "© Copyright Infoprofile LTD.",
-                style: TextStyle(
+               // "© Copyright Infoprofile LTD.",
+               AppStringLastContainer.copyright,
+                style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 95,
               ),
               Text(
-                "All rights reserved.",
-                style: TextStyle(
+                //"All rights reserved.",
+               AppStringLastContainer.allrightreserved,
+                style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),

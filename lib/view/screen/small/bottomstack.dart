@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:screen15/res/component/app_color.dart';
 import 'package:screen15/res/component/app_images_mobile.dart';
+import 'package:screen15/res/component/app_string_last_container.dart';
 import 'package:screen15/view/screen/small/bottomcard.dart';
 
 class BottomStack extends StatefulWidget {
@@ -24,7 +25,9 @@ bottomStack1(context) {
     children: [
       Container(
         height: 1060,
-        color: Colors.white,
+        color:
+            // AppColor.myColor
+            AppColor.myColor,
       ),
       Positioned(
         top: 140,
@@ -49,9 +52,10 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "Not a normal app, its unique!",
-                  style: TextStyle(
+                Text(
+                  //"Not a normal app, its unique!",
+                  AppStringLastContainer.notanormal,
+                  style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -59,9 +63,10 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "Services are provided everywhere.",
-                  style: TextStyle(
+                Text(
+                  // "Services are provided everywhere.",
+                  AppStringLastContainer.services,
+                  style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -73,9 +78,10 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
-                  "Features",
-                  style: TextStyle(
+                Text(
+                  // "Features",
+                  AppStringLastContainer.features,
+                  style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -83,37 +89,43 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "View Feeds",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  //"View Feeds",
+                  AppStringLastContainer.viewfeeds,
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Make Connections",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  //"Make Connections",
+                  AppStringLastContainer.makeconnection,
+
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Creating Visiting Cards",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  //"Creating Visiting Cards",
+                  AppStringLastContainer.createvisting,
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Create Different Profile Pages",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  //"Create Different Profile Pages",
+                  AppStringLastContainer.create,
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
-                  "Links",
-                  style: TextStyle(
+                Text(
+                  // "Links",
+                  AppStringLastContainer.links,
+                  style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -121,23 +133,28 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Privacy Policy",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  //"Privacy Policy",
+                  AppStringLastContainer.privacy,
+
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Terms & Connections",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  // "Terms & Connections",
+                  AppStringLastContainer.termscondition,
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
-                  "Company",
-                  style: TextStyle(
+                Text(
+                  //"Company",
+                  AppStringLastContainer.company,
+
+                  style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -145,23 +162,28 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "About Us",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  // "About Us",
+                  AppStringLastContainer.aboutus,
+
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Contact Us",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  // "Contact Us",
+                  AppStringLastContainer.contactus,
+
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
-                  "Help & Support",
-                  style: TextStyle(
+                Text(
+                  // "Help & Support",
+                  AppStringLastContainer.helpandsupport,
+                  style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -169,9 +191,10 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "Getting Started FAQ",
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                Text(
+                  //"Getting Started FAQ",
+                  AppStringLastContainer.gettingstartewd,
+                  style: const TextStyle(fontSize: 15, color: Colors.white),
                 ),
                 const SizedBox(
                   height: 20,
@@ -184,22 +207,24 @@ bottomStack1(context) {
                 const SizedBox(
                   height: 30,
                 ),
-                const Wrap(
+                Wrap(
                   direction: Axis.vertical,
                   children: [
                     Text(
-                      "© Copyright Infoprofile LTD.",
-                      style: TextStyle(
+                      // "© Copyright Infoprofile LTD.",
+                      AppStringLastContainer.copyright,
+                      style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 95,
                     ),
                     Text(
-                      "All rights reserved.",
-                      style: TextStyle(
+                      // "All rights reserved.",
+                      AppStringLastContainer.allrightreserved,
+                      style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                           color: Colors.white),

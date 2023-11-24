@@ -1,11 +1,12 @@
 //last stack screen of the web to display the login and about the compoany details
-
 import 'package:flutter/material.dart';
+import 'package:screen15/custom/custom_paint_container.dart';
 import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_string_last_container.dart';
 
 class WebLast extends StatefulWidget {
   const WebLast({super.key});
-
   @override
   State<WebLast> createState() => _WebLastState();
 }
@@ -18,15 +19,27 @@ class _WebLastState extends State<WebLast> {
       children: [
         //container for definig the base
         Container(
-          height: 500,
+          height: 400,
           color: AppColor.myColor,
         ),
         //positionig of the rectangle as the backgroung
+        // Positioned(
+        //     bottom: 0,
+        //     child: SizedBox(
+        //         width: MediaQuery.of(context).size.width * 1,
+        //         child: Image.asset(AppImage.lastrectangle))),
         Positioned(
-            bottom: 0,
-            child: SizedBox(
-                width: MediaQuery.of(context).size.width * 1,
-                child: Image.asset('images/last_rectangle.png'))),
+            //top: 0,
+            child: ClipPath(
+          clipper: LeftSlopedClipper(),
+          child: Container(
+            decoration: BoxDecoration(color: AppColor.myColor1
+                //Color.fromARGB(255, 13, 96, 212),
+                ),
+            width: MediaQuery.of(context).size.width * 1,
+            height: 450,
+          ),
+        )),
         //positioning of the sized box above the rectangle containing login content
         Center(
           child: SizedBox(
@@ -41,40 +54,40 @@ class _WebLastState extends State<WebLast> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Column(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Try Infoprofile for free",
-                          style: TextStyle(
+                          AppStringLastContainer.tryinfo,
+                          style: const TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: Colors.blue),
                         ),
                         Row(
                           children: [
-                            Icon(Icons.check),
+                            const Icon(Icons.check),
                             Text(
-                              "   Multiple profiles",
-                              style: TextStyle(fontSize: 12),
+                              AppStringLastContainer.multipleprofile,
+                              style: const TextStyle(fontSize: 12),
                             ),
-                            Icon(Icons.check),
+                            const Icon(Icons.check),
                             Text(
-                              "  Creative",
-                              style: TextStyle(fontSize: 12),
+                              AppStringLastContainer.creative,
+                              style: const TextStyle(fontSize: 12),
                             ),
-                            Icon(Icons.check),
+                            const Icon(Icons.check),
                             Text(
-                              "  Build Connections",
-                              style: TextStyle(fontSize: 12),
+                              AppStringLastContainer.buildconnection,
+                              style: const TextStyle(fontSize: 12),
                             )
                           ],
                         ),
                       ],
                     ),
-                    const Text(
-                      "Sign In",
-                      style: TextStyle(
+                    Text(
+                      AppStringLastContainer.signin,
+                      style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.blue,
@@ -85,12 +98,12 @@ class _WebLastState extends State<WebLast> {
                       decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(10)),
-                      child: const Center(
+                      child: Center(
                           child: Padding(
-                        padding: EdgeInsets.all(6.0),
+                        padding: const EdgeInsets.all(6.0),
                         child: Text(
-                          "Sign Up",
-                          style: TextStyle(
+                          AppStringLastContainer.signup,
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold),
@@ -115,10 +128,10 @@ class _WebLastState extends State<WebLast> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset('images/info_B&W.png'),
-                  const Text(
-                    "Not a normal app, its unique!",
-                    style: TextStyle(
+                  Image.asset(AppImage.bw),
+                  Text(
+                    AppStringLastContainer.notanormal,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
@@ -126,9 +139,9 @@ class _WebLastState extends State<WebLast> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text(
-                    "Services are provided everywhere.",
-                    style: TextStyle(
+                  Text(
+                    AppStringLastContainer.services,
+                    style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
@@ -136,77 +149,46 @@ class _WebLastState extends State<WebLast> {
                   const SizedBox(
                     height: 40,
                   ),
-                  Image.asset('images/logo1.png')
+                  Image.asset(AppImage.logo1)
                 ],
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Features",
-                    style: TextStyle(
+                    AppStringLastContainer.features,
+                    style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "View Feeds",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.viewfeeds,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Make Connections",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.makeconnection,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Creating Companies",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.creatingcompanies,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Mobile App",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
-                  ),
-                ],
-              ),
-              Container(
-                height: 200,
-                width: 1,
-                color: Colors.white,
-              ),
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Links",
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Privacy & Policy",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Terms & Connections",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.mobileapp,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ],
               ),
@@ -215,29 +197,29 @@ class _WebLastState extends State<WebLast> {
                 width: 1,
                 color: Colors.white,
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Company",
-                    style: TextStyle(
+                    AppStringLastContainer.links,
+                    style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Contact US",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.privacy,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "About US",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.termscondition,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ],
               ),
@@ -246,22 +228,53 @@ class _WebLastState extends State<WebLast> {
                 width: 1,
                 color: Colors.white,
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Help & Support",
-                    style: TextStyle(
+                    AppStringLastContainer.company,
+                    style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Text(
-                    "Getting Started with FAQ",
-                    style: TextStyle(fontSize: 15, color: Colors.white),
+                    AppStringLastContainer.contactus,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    AppStringLastContainer.aboutus,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                ],
+              ),
+              Container(
+                height: 200,
+                width: 1,
+                color: Colors.white,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    AppStringLastContainer.helpandsupport,
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    AppStringLastContainer.gettingstartewd,
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ],
               ),
@@ -276,7 +289,7 @@ class _WebLastState extends State<WebLast> {
               height: 1,
               color: Colors.white,
             )),
-        const Positioned(
+        Positioned(
           bottom: 30,
           left: 50,
           right: 50,
@@ -284,18 +297,18 @@ class _WebLastState extends State<WebLast> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "© Copyright Infoprofile LTD.",
-                style: TextStyle(
+                AppStringLastContainer.copyright,
+                style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 95,
               ),
               Text(
-                "All rights reserved.",
-                style: TextStyle(
+                AppStringLastContainer.allrightreserved,
+                style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),

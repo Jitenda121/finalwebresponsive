@@ -1,6 +1,11 @@
 //third screen of the tab for world image,side bubble image and text
 
 import 'package:flutter/material.dart';
+import 'package:screen15/custom/rich_text2.dart';
+import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_images.dart';
+import 'package:screen15/res/component/app_images_mobile.dart';
+import 'package:screen15/res/component/app_string.dart';
 
 class TabSecondStack extends StatefulWidget {
   const TabSecondStack({super.key});
@@ -16,7 +21,8 @@ class _TabSecondStackState extends State<TabSecondStack> {
       children: [
         //for defining the base
         Container(
-          color: Colors.white,
+          color: AppColor.myColor,
+          //Colors.white,
           height: 700,
         ),
         //positionb the side bubble image
@@ -25,7 +31,7 @@ class _TabSecondStackState extends State<TabSecondStack> {
           child: SizedBox(
               height: 500,
               child: Image.asset(
-                'images/sidebuble.png',
+                AppImage.sidebubble,
                 fit: BoxFit.contain,
               )),
         ),
@@ -39,53 +45,23 @@ class _TabSecondStackState extends State<TabSecondStack> {
               SizedBox(
                   height: 400,
                   child: Image.asset(
-                    'images/world_connect.png',
+                    AppImageMobile.worldimage,
                     fit: BoxFit.contain,
                   )),
               //column for displaying the text on the stack
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  RichText(
-                    text: const TextSpan(
-                      text: 'You can create ',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                      children: [
-                        TextSpan(
-                          text: 'Multiple profiles ',
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        TextSpan(
-                          text: 'for ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        TextSpan(
-                          text: 'your\naccount',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
+                  
+                  richTextW1(context)
                 ],
               ),
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "A domain that helps you develop your skills through building\nmultiple portals to solve problems . All you need is a laptop and\nan attitude to learn and progress. We primarily deal with Web\nDev, App Dev and Blockchain elements.",
-                style: TextStyle(
+              Text(
+                AppString.adomain1,
+                style: const TextStyle(
                     fontSize: 20,
                     color: Colors.grey,
                     fontWeight: FontWeight.bold),

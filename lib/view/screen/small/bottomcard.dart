@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:screen15/res/component/app_color.dart';
+import 'package:screen15/res/component/app_string.dart';
+import 'package:screen15/res/component/app_string_last_container.dart';
 
 class BottomLoginCard extends StatefulWidget {
   const BottomLoginCard({super.key});
@@ -18,8 +20,8 @@ class _BottomLoginCardState extends State<BottomLoginCard> {
       //card for defing the shape and shape
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        elevation: 2,
-        shadowColor: Colors.white,
+        // elevation: 2,
+        //shadowColor: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -30,7 +32,8 @@ class _BottomLoginCardState extends State<BottomLoginCard> {
                 height: 10,
               ),
               Text(
-                "Try Infoprofile for free",
+                //"Try Infoprofile for free",
+                AppStringLastContainer.tryinfo,
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -39,19 +42,34 @@ class _BottomLoginCardState extends State<BottomLoginCard> {
               const SizedBox(
                 height: 20,
               ),
-              const SizedBox(
+              SizedBox(
                 child: Wrap(
-                  children: [Icon(Icons.check), Text("   Multiple profiles")],
+                  children: [
+                    const Icon(Icons.check),
+                    Text(
+                        //"   Multiple profiles"
+                        AppStringLastContainer.multipleprofile)
+                  ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 child: Wrap(
-                  children: [Icon(Icons.check), Text("  Creative")],
+                  children: [
+                    const Icon(Icons.check),
+                    Text(
+                        // "  Creative"
+                        AppStringLastContainer.creative)
+                  ],
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 child: Wrap(
-                  children: [Icon(Icons.check), Text("  Build Connections")],
+                  children: [
+                    const Icon(Icons.check),
+                    Text(
+                        // "  Build Connections"
+                        AppStringLastContainer.buildconnection)
+                  ],
                 ),
               ),
               const SizedBox(
@@ -60,16 +78,16 @@ class _BottomLoginCardState extends State<BottomLoginCard> {
               //using of wrap function to automatically occupy the space
               Wrap(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     height: 50,
                     width: 80,
                     child: Center(
                       child: Text(
-                        "Log In",
+                        AppString.login,
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue,
+                            color: AppColor.myColor1,
                             decoration: TextDecoration.underline),
                       ),
                     ),
@@ -81,12 +99,12 @@ class _BottomLoginCardState extends State<BottomLoginCard> {
                     height: 50,
                     width: 80,
                     decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: AppColor.myColor1,
                         borderRadius: BorderRadius.circular(10)),
-                    child: const Center(
+                    child: Center(
                         child: Text(
-                      "Sign Up",
-                      style: TextStyle(
+                      AppString.signup,
+                      style: const TextStyle(
                           color: Colors.white,
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
